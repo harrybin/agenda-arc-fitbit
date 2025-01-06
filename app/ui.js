@@ -398,6 +398,10 @@ export class ClockFace {
     }
   }
 
+  htmlToPlainText(htmlText) {
+    return htmlText.replace(/<[^>]*>/g, "");
+  }
+
   renderEventInfo() {
     if (this.currentEvent >= this.eventsShowing.length) {
       this.currentEvent = 0;
@@ -411,7 +415,8 @@ export class ClockFace {
     } else {
       UI_STATUS_MESSAGE_TEXT.text = "";
       UI_EVENT_TITLE.text = eventShown.title || "No Title";
-      UI_EVENT_DESC.text = eventShown.description || "No Description";
+      UI_EVENT_DESC.text =
+        htmlToPlainText(eventShown.description) ?? "No Description";
       UI_EVENT_LOC.text = eventShown.location || "No Location";
     }
   }
