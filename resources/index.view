@@ -1,9 +1,10 @@
 <svg id="root">
 
-  <text id="textDate" />
-  <text id="textTime" />
   <text id="textSyncAge" />
   <text id="textHeartRate" />
+  <text id="battery"/>
+  <text id="textDate" />
+  <text id="textTime" />
   <arc id="arcTimeline" />
   
   <line id="now" />

@@ -1,6 +1,7 @@
 import document from "document";
 import { preferences } from "user-settings"; // TODO: Move to index.js
 
+import Battery from "./battery";
 import * as util from "./utils";
 
 let root = document.getElementById("root");
@@ -61,6 +62,7 @@ export class ClockFace {
     this.currentEvent = 0;
     this.currentHours = null;
     this.eventsLastUpdated = -1;
+    Battery.run();
   }
 
   relayout() {
@@ -216,12 +218,12 @@ export class ClockFace {
       UI_SYNCAGE_TEXT.text = "Loading...";
     } else {
       UI_SYNCAGE_TEXT.text =
-        "Data age: " +
+        "↻ " +
         Math.max(
           0,
           Math.floor((new Date() - this.eventsLastUpdated) / 60 / 1000)
         ) +
-        " mins";
+        " min";
     }
   }
 

@@ -1,26 +1,26 @@
 #textDate {
   x: 50%;
-  y: 54;
+  y: 50;
   fill: white;
   text-anchor: middle;
-  font-size: 20;
+  font-size: 25;
   font-family: System-Bold;
   text-length: 32;
 }
 
 #textTime {
   x: 50%;
-  y: 99;
+  y: 110;
   fill: white;
   text-anchor: middle;
-  font-size: 50;
+  font-size: 80;
   font-family: System-Bold;
   text-length: 32;
 }
 
 #textSyncAge {
-  x: 0;
-  y: 18;
+  x: 50;
+  y: 20;
   fill: white;
   font-size: 18;
   text-anchor: start;
@@ -28,11 +28,20 @@
 }
 
 #textHeartRate {
-  x: 100%;
+  x: 50%;
   y: 18;
   fill: white;
   font-size: 18;
   text-anchor: end;
+  text-length: 10;
+}
+
+#battery {
+  x: 100%-35;
+  y: 30;
+  font-size: 25;
+  text-anchor: end;
+  fill: white;
   text-length: 10;
 }
 
